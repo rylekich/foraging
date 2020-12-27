@@ -5,7 +5,10 @@ body {
 	font-size: 18px;
 	box-sizing: border-box;
 	background-color: olive;
-	background-image: url(moss.jpg);
+}
+
+#home {
+		background-image: url(moss.jpg);
 	background-blend-mode: exclusion;
 }
 
