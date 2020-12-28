@@ -48,3 +48,26 @@ function Marquee() {
 }
 
 Marquee(); 
+
+//background color change
+
+let colors = ['DarkCyan', 'GoldenRod', 'Olive']
+let images = ['moss.jpg', 'berries.jpg', 'mushroom.jpg']
+
+function update() {
+
+  let randomNumbcol = Math.floor( Math.random() * colors.length );
+  let randomColor = colors[randomNumbcol];
+
+  $("body#home").css("background-color", randomColor); 
+
+
+  let randomImage =  "url(" + images[Math.floor(Math.random() * images.length)] + ")"
+
+  $("body#home").css("background-image", randomImage );
+
+}
+            
+setInterval(function() {
+                update(); //place function here
+            }, 5000);
