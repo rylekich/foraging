@@ -1,16 +1,15 @@
-// code from user enxaneta on stackoverflow: https://stackoverflow.com/questions/56041826/animate-marquee-on-svg-curve found via https://www.are.na/fiona-carty/cool-websites-9ecxxoa1doq.
+// code from user enxaneta on stackoverflow: https://stackoverflow.com/questions/56041826/animate-marquee-on-svg-curve 
 
 function Init() {
   let w = wrap.clientWidth;
   let h = wrap.clientHeight;
+
   ellipse.setAttributeNS(null, "viewBox", `0 0 ${w}  ${h}`);
-  let d = `M${w / 10},${h / 2}A${4 * w / 10},${4 * h / 10} 0 0 0 ${9 *
-    w /
-    10} ${5 * h / 10} A${4 * w / 10},${4 * h / 10} 0 0 0 ${w / 10} ${5 *
-    h /
-    10} A${4 * w / 10},${4 * h / 10} 0 0 0 ${9 * w / 10} ${5 * h / 10} A${4 *
-    w /
-    10},${4 * h / 10} 0 0 0 ${w / 10} ${5 * h / 10}`;
+  let d = `M${w / 10},${h / 2} 
+  A${4 * w / 10},${4 * h / 10} 0 0 0 ${9 * w / 10} ${5 * h / 10} 
+  A${4 * w / 10},${4 * h / 10} 0 0 0 ${w / 10} ${5 *h / 10} 
+  A${4 * w / 10},${4 * h / 10} 0 0 0 ${9 * w / 10} ${5 * h / 10} 
+  A${4 * w / 10},${4 * h / 10} 0 0 0 ${w / 10} ${5 * h / 10}`;
 
   thePath.setAttributeNS(null, "d", d);
   let path_length =  thePath.getTotalLength();
@@ -33,8 +32,9 @@ function Init() {
 
 window.setTimeout(function() {
   Init();
+
   window.addEventListener("resize", Init, false);
-}, 15);
+}, 30);
 
 let so = 0;
 
@@ -49,18 +49,18 @@ function Marquee() {
 
 Marquee(); 
 
-//background color change
+/*background color change
 
-let colors = ['DarkCyan', 'GoldenRod', 'Olive']
-let images = ['moss.jpg', 'berries.jpg', 'mushroom.jpg']
+let colors = ['DarkCyan', 'GoldenRod', 'Olive']*/
+let images = ['moss.jpg', 'berries.jpg', 'mushroom.jpg', 'dance1.jpg', 'dance2.jpg']
 
 function update() {
-
+/*
   let randomNumbcol = Math.floor( Math.random() * colors.length );
   let randomColor = colors[randomNumbcol];
 
   $("body#home").css("background-color", randomColor); 
-
+*/
 
   let randomImage =  "url(" + images[Math.floor(Math.random() * images.length)] + ")"
 

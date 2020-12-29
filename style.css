@@ -1,4 +1,9 @@
 /* all */
+@font-face {
+font-family: Cirrus;
+src: url(CirrusCumulus.woff);
+}
+
 body {
 	margin: 20px;
 	padding: 0;
@@ -9,12 +14,17 @@ body {
 	background-color: olive;
 }
 
+::selection {
+  color: gainsboro;
+  background: #9D9DFF;
+}
+
 #home {
 	background-image: url(moss.jpg);
 	background-blend-mode: exclusion;
 	background-size: cover;
-	transition: background-image 1s ease;
-	transition: background-color 1s ease;
+	background-attachment: fixed;
+	transition: background-image 1s, background-color 1s;
 }
 
 body::-webkit-scrollbar {
@@ -25,8 +35,12 @@ a {
 	font-family: serif;
 	color: gainsboro;
 	text-decoration: none;
-	border-bottom: 2px solid white;
+	border-bottom: 2px solid gainsboro;
 	padding-bottom: 1.5px;
+}
+
+a:hover {
+
 }
 
 nav a:first-child {
@@ -50,7 +64,7 @@ footer > p {
 
 
 h1 {
-	font-family: serif;
+	font-family: Cirrus;
 	font-size: 1.5em;
 }
 
@@ -69,7 +83,7 @@ h3 {
 	font-weight: 400;
 }
 
-p {
+p.intro {
 	
 }
 
@@ -80,26 +94,33 @@ ul {
 }
 
 section {
-	max-width: 70vw;
+	max-width: 85vw;
 }
 
 /* js test */
 #wrap{
-	pointer-events: none;
+	/* pointer-events: none;*/
     width:100%;
     height:100%;
     position: fixed;
-    /*top: 0;*/
+    top: 0;
     left: 0;  
 }
 
 text {
-	font-family: sans-serif;
-    text-transform: uppercase;
-    font-weight: lighter;
+	font-family: Cirrus;
     fill: gainsboro;
 }
 
+text a {
+	font-family: Cirrus;
+	fill: gainsboro; 
+	text-decoration-line: overline;
+}
+
+text a:hover {
+	fill:#9D9DFF;
+}
 /* index */
 
 
@@ -113,8 +134,8 @@ text {
 }
 
 .prompts div {
-	width: 50%;
-
+	width: 47%;
+	padding: 0 10px 0 0;
 }
 
 .prompts div:first-child {
